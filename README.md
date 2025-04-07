@@ -60,7 +60,7 @@ GET name
 ```
 * Deleting values
 ```
-DEL key name
+DEL key 
 ```
 PING compatibility with redis
 ```
