@@ -344,7 +344,7 @@ func handleConnection(conn net.Conn, cache *Cache) {
 				}
 			}
 			cache.Set(key, value, ttl)
-			conn.Write([]byte("+OK\r\n"))
+			conn.Write([]byte("+ OK\r\n"))
 
 		case "GET":
 			if len(parts) != 2 {
@@ -354,9 +354,9 @@ func handleConnection(conn net.Conn, cache *Cache) {
 			key := parts[1]
 			value, exists := cache.Get(key)
 			if exists {
-				conn.Write([]byte("+" + value + "\r\n"))
+				conn.Write([]byte("*" + value + "\r\n"))
 			} else {
-				conn.Write([]byte("$-1\r\n"))
+				conn.Write([]byte("key not availible\r\n"))
 			}
 
 		case "DEL":
@@ -820,7 +820,8 @@ func main() {
 
 `)
 
-	fmt.Printf("🌟 keep foots clean because dust is inevitable\n")
+	fmt.Printf("%s", "🌟 keep feet clean because dust is inevitable\n")
+	fmt.Printf("  \n")
 
 	log.Printf("Starting high-performance cache with %d shards", ShardCount)
 	log.Printf("System has %d CPU cores", runtime.NumCPU())

@@ -1,7 +1,7 @@
 # dustdb 
 ### A faster Database  than redis and memcache 
 
-🌟 keep foots clean because dust is inevitable.
+🌟 keep feet clean because dust is inevitable.  
 
 ⠀⠀⠀⢀⡤⣾⠉⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⢠⠊⠉⣧⢤⡀⠀⠀⠀
 ⠀⢀⣔⠙⡄⠈⡆⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠀⢠⠃⢠⠋⣢⡀⠀
@@ -21,7 +21,7 @@
 ⠀⠀⠀⠀⠀⠤⠴⠤⠤⠠⠴⠠⠤⠄⠀⠂⠰⠒⠦⠶⠆⠠⠀⠀⠀⠀
 
 
-DUSTDB is easy to use yet powerful caching database which supports key value data which is cached and it uses Programmiung languages for core caching mechanisma and network request masking which your Operating system uses (Assembly,C,C++) 
+dustDB is easy to use yet powerful caching database which supports key value data which is cached and it uses same Algorithms  for core caching mechanism and network request parsing  which almost all your Operating Systems use. 
 
 
 
@@ -37,7 +37,7 @@ DUSTDB is easy to use yet powerful caching database which supports key value dat
 | **Use Cases**          | Caching, messaging                    | Caching                              | Caching, real-time apps                     | Caching, real-time apps                            |
 | **Memory Efficiency**  | Moderate (~70–80%)                    | High (~90%)                          | Superior (~95%)                             | **Exceptional (99.5%)**                            |
 | **Eviction Policy**    | LRU, LFU                              | LRU                                  | Custom algorithm                            | Custom yet OS level optimized algorithms                        |
-| **Minimum RAM Required** | 512 MB+                            | 256 MB+                              | 512 MB+                                     | **Only 128 MB — runs like a charm on old servers** |
+| **Minimum RAM Required** | 512 MB+                            | 256 MB+                              | 512 MB+                                     | **Only 22 MB — runs like a charm on old mobile servers** |
 | **Threading Model**    | Mostly single-threaded                | Multi-threaded but not optimal       | Fully multithreaded, async                  | **Multithreaded, async-optimized**                 |
 | **Algorithms**         | Event loop, RDB/AOF                   | Slab allocator, hash table           | Custom scheduler, smart locking             | OS-level schedulers, zero-copy pipelines           |
 | **Garbage Handling**   | Can leave memory fragmentation        | Can leak/fragment memory             | Efficient GC avoidance                      | **No garbage buildup — runs clean on legacy servers** |
