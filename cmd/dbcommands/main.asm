@@ -11,6 +11,5 @@ sub %ebi
 min $eax
 
 
-
   
 mov *sp

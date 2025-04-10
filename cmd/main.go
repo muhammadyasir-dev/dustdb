@@ -344,7 +344,7 @@ func handleConnection(conn net.Conn, cache *Cache) {
 				}
 			}
 			cache.Set(key, value, ttl)
-			conn.Write([]byte("+ OK\r\n"))
+			conn.Write([]byte("OK\r\n"))
 
 		case "GET":
 			if len(parts) != 2 {
@@ -354,7 +354,7 @@ func handleConnection(conn net.Conn, cache *Cache) {
 			key := parts[1]
 			value, exists := cache.Get(key)
 			if exists {
-				conn.Write([]byte("*" + value + "\r\n"))
+				conn.Write([]byte("" + value + "\r\n"))
 			} else {
 				conn.Write([]byte("key not availible\r\n"))
 			}
@@ -496,7 +496,7 @@ const dashboardTemplate = `
 <!DOCTYPE html>
 <html>
 <head>
-    <title>High-Performance Cache Dashboard</title>
+    <title>Dustdb</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -623,7 +623,7 @@ const dashboardTemplate = `
 </head>
 <body>
     <div class="container">
-        <h1>High-Performance Cache Dashboard</h1>
+        <h1>Dustdb</h1>
         
         <h2>Cache Statistics</h2>
         <div class="stats-grid">
